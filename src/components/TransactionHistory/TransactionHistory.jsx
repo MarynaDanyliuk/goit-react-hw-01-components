@@ -28,11 +28,11 @@ export const TransactionHistory = ({ items }) => {
   );
 };
 
-TransactionHistory.propTypes = {
-  items: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    amount: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
-  }),
-};
+// TransactionHistory.propTypes = {
+//   items: PropTypes.shape({
+//     id: PropTypes.string.isRequired,
+//     type: PropTypes.string.isRequired,
+//     amount: PropTypes.string.isRequired,
+//     currency: PropTypes.string.isRequired,
+//   }),
+// };

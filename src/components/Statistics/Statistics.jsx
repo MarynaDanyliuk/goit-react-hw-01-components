@@ -28,12 +28,11 @@ export const Statistics = ({ title = 'Upload stats', stats }) => {
   );
 };
 
-Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf({
-    id: PropTypes.number.isRequired,
-    label: PropTypes.number.isRequired,
-    percentage: PropTypes.number.isRequired,
-  }),
-  // id: PropTypes.number.isRequired,
-};
+// Statistics.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   stats: PropTypes.arrayOf({
+//     id: PropTypes.number.isRequired,
+//     label: PropTypes.number.isRequired,
+//     percentage: PropTypes.number.isRequired,
+//   }),
+// };
