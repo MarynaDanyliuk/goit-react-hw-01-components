@@ -6,7 +6,12 @@ export const FriendList = ({ friends }) => {
   return (
     <ul className={css['friend-list']}>
       {friends.map(friend => (
-        <FriendListItem key={friend.name} />
+        <FriendListItem
+          avatar={friend.avatar}
+          name={friend.name}
+          isOnline={friend.isOnline}
+          key={friend.name}
+        />
         // <li key={friend.name}>{friend.name}</li>
       ))}
       {/* <!-- Довільна кіл-сть FriendListItem --> */}
