@@ -1,7 +1,8 @@
 import { Profile } from 'components/Profile/Profile.jsx';
-import { Statistics } from './Statistics/Statistics';
-import { FriendList } from './FriendList/FriendList';
-import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import { Statistics } from '../Statistics/Statistics';
+import { FriendList } from '../FriendList/FriendList';
+import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
+import { Container } from '../App/App.styled';
 
 import user from 'user.json';
 import data from 'data.json';
@@ -10,15 +11,17 @@ import transactions from 'transactions.json';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
+    <Container
+    // style={
+    //   {
+    //     height: '100vh',
+    //     display: 'flex',
+    //     justifyContent: 'center',
+    //     alignItems: 'center',
+    //     fontSize: 40,
+    //     color: '#010101',
+    //   }
+    // }
     >
       <Profile
         username={user.username}
@@ -31,6 +34,6 @@ export const App = () => {
       <Statistics stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />;
-    </div>
+    </Container>
   );
 };
