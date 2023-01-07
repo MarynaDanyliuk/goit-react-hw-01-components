@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
 export const Statistics = ({ title = 'Upload stats', stats }) => {
@@ -36,3 +36,14 @@ export const Statistics = ({ title = 'Upload stats', stats }) => {
 //     percentage: PropTypes.number.isRequired,
 //   }),
 // };
+
+Statistics.propTypes = {
+  // title: PropTypes.string.isRequired,
+  friends: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.number.isRequired,
+      label: PropTypes.number.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};
