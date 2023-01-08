@@ -1,0 +1,31 @@
+.transaction-history {
+  margin-top: 50px;
+  width: 600px;
+}
+
+thead {
+  background-color: blue;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+tr {
+  border-collapse: collapse;
+}
+
+tr:nth-child(2n) {
+  background-color: lightblue;
+}
+
+tr th,
+tr td {
+  width: 33%;
+  text-transform: uppercase;
+  padding: 5px;
+  border: solid 1px #777;
+}
+
+/* td th {
+  background-color: lightblue;
+} */
