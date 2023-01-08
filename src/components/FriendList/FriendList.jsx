@@ -1,7 +1,6 @@
 import css from './FriendList.module.css';
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 import PropTypes from 'prop-types';
-// import friends from '/friends.json';
 
 export const FriendList = ({ friends }) => {
   return (
@@ -11,7 +10,7 @@ export const FriendList = ({ friends }) => {
           avatar={friend.avatar}
           name={friend.name}
           isOnline={friend.isOnline}
-          key={friend.name}
+          key={friend.id}
         />
       ))}
     </ul>
