@@ -1,46 +1,31 @@
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
-export const Statistics = ({ title = 'Upload stats', stats }) => {
+export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
-      <h2 className="title">{title}</h2>
-
-      <ul className="stat-list">
-        <li className="item">
-          <span className="label">.docx</span>
-          <span className="percentage">4%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp3</span>
-          <span className="percentage">14%</span>
-        </li>
-        <li className="item">
-          <span className="label">.pdf</span>
-          <span className="percentage">41%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp4</span>
-          <span className="percentage">12%</span>
-        </li>
-      </ul>
+      {title && <h2 className={css.title}>{title}</h2>}
+      {title && (
+        <ul className={css['stat-list']}>
+          {stats.map(stat => (
+            <li key={stat.id} className={css.item}>
+              <span className={css.label}>{stat.label}</span>
+              <span className={css.percentage}>
+                {stat.percentage}
+                {`%`}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 };
 
-// Statistics.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   stats: PropTypes.arrayOf({
-//     id: PropTypes.number.isRequired,
-//     label: PropTypes.number.isRequired,
-//     percentage: PropTypes.number.isRequired,
-//   }),
-// };
-
 Statistics.propTypes = {
-  // title: PropTypes.string.isRequired,
-  friends: PropTypes.arrayOf(
-    PropTypes.exact({
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
       id: PropTypes.number.isRequired,
       label: PropTypes.number.isRequired,
       percentage: PropTypes.number.isRequired,
