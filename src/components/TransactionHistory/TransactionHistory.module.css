@@ -3,11 +3,12 @@
   width: 600px;
 }
 
-thead {
-  background-color: blue;
+thead th {
+  background-color: rgb(53, 100, 172);
   font-weight: bold;
   text-transform: uppercase;
   color: white;
+  padding: 5px;
 }
 
 tr {
@@ -18,12 +19,14 @@ tr:nth-child(2n) {
   background-color: lightblue;
 }
 
-tr th,
+/* tr th, */
 tr td {
   width: 33%;
-  text-transform: uppercase;
+  text-align: center;
   padding: 5px;
   border: solid 1px #777;
+  color: #777;
+  text-transform: capitalize;
 }
 
 /* td th {
